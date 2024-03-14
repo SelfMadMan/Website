@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 export default function Privacy() {
@@ -5,6 +6,7 @@ export default function Privacy() {
         <>
             <Navbar />
             <h2>Privacy</h2>
+            <Footer />
         </>
     )
 }

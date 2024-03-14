@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 export default function NoPage() {
@@ -5,6 +6,7 @@ export default function NoPage() {
         <>
             <Navbar />
             <h2>Error 404 : Not Found</h2>
+            <Footer />
         </>
     )
 }

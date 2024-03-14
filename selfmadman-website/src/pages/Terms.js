@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 export default function Terms() {
@@ -5,6 +6,7 @@ export default function Terms() {
         <>
             <Navbar />
             <h2>Terms</h2>
+            <Footer />
         </>
     )
 }
