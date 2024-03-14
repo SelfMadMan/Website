@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+
+    /*========== Color ==========*/
+    --white: #fff;
+    --dark-blue: #1F233C;
+    --med-blue: #377DDD;
+    --light-blue: #23CFDD;
+    --yellow: #FDCF07;
+    --orange: #FC7200;
+
+
+    /*========== Font family ==========*/
+    --outfit: 'Outfit', sans-serif;
+}
+
+/*==================== BASE ====================*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden ;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+input:focus{
+    outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+body {
+  background-color: var(--body-purple);
+  overflow-x: hidden;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.section {
+    padding: 80px 10%;
+}
+.section-title {
+  color: var(--white);
+  font-family: Montserrat;
+  font-size: 2vw;
+  font-weight: 800;
+  text-align: center;
+  max-width: 500px;
+}
+.section__text {
+  color: #797979;
+  font-family: var(--inter);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.cta-btn {
+    display: flex;
+    padding: 0px 20px 4px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.027px;
+    border-radius: 0.8px;
+    background: #FDCF07;
+    box-shadow: 3.2px 3.2px 0px 0px #FC7200;
+    color: var(--white, #FFF);
+    text-align: center;
+    font-family: "TOMO Bossa";
+    font-size: 21.583px;
+    font-weight: 900;
+    border: none;
+
+}
+
+
+
+@media only screen and (max-width: 850px) {
+    .section {
+        padding: 40px 5%;
+    }
+    .section__text {
+      text-align: center;
+      font-size: 16px;
+    }
+    .section-label,
+    .purple-btn,
+    .purple-light-btn {
+      font-size: 16px;
+    }
+    .section-title {
+      font-size: 5vw;
+    }
+}
+

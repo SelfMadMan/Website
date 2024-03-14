@@ -1,0 +1,60 @@
+.navbar {
+  background-color: var(--dark-blue);
+  padding: 15px 8%;
+}
+  .navbar-content {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-items a {
+    color: var(--white);
+    text-align: center;
+    font-family: "TOMO Bossa";
+    font-size: 18px;
+    font-weight: 900;
+  }
+  
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+  
+  @media (max-width: 768px) {
+    .nav-items {
+      position: absolute;
+      right: 0;
+      top: 55px;
+      background-color: var(--dark-blue);
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      display: none;
+    }
+    .navbar-content {
+      flex-direction: column;
+    }
+    .nav-items.open {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 50px;
+      padding-top: 100px;
+    }
+    .nav-toggle {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+  
