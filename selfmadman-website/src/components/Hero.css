@@ -1,0 +1,114 @@
+.hero-section {
+    background: var(--dark-blue);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 50px;
+}
+.hero-content {
+    max-width: 650px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    z-index: 10;
+}
+.hero-content h2 {
+    color: var(--white, #FFF);
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
+    font-family: "TOMO Bossa";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%; /* 40px */
+    text-transform: capitalize;
+}
+.hero-content-p {
+    color: var(--white, #FFF);
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%; /* 26.1px */
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40%;
+    z-index: 10;
+}
+.phone-mockup {
+    transform: rotate(13.78deg);
+}
+
+.hero-coin-1 {
+    position: absolute;
+    width: 21px;
+    height: auto;
+    top: 23px;
+    left: 128px;
+}
+.hero-coin-2 {
+    position: absolute;
+    width: 21px;
+    height: auto;
+    top: 157px;
+    left: 50%;
+}
+.hero-coin-3 {
+    position: absolute;
+    width: 42px;
+    height: auto;
+    top: 5px;
+    right: -14px;
+}
+.hero-coin-4 {
+    position: absolute;
+    width: 42px;
+    height: auto;
+    top: 40%;
+    left: -14px;
+}
+.hero-coin-5 {
+    position: absolute;
+    width: 21px;
+    height: auto;
+    bottom: 95px;
+}
+.hero-coin-6 {
+    position: absolute;
+    width: 21px;
+    height: auto;
+    right: 79px;
+    bottom: 154px;
+}
+
+@media only screen and (max-width: 850px) {
+    .hero-section  {
+        flex-direction: column;
+    }
+    .hero-content {
+        align-items: center;
+    }
+    .hero-content h2 {
+        text-align: center;
+        font-size: 35px;
+    }
+    .hero-content-p {
+        text-align: center;
+        font-size: 16px;
+    }
+    .phone-mockup {
+        transform: rotate(0deg);
+    }
+    .hero-coin-2 {
+        display: none;
+    }
+}

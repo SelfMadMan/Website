@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import { db } from '../firebaseconfig'; // Ensure this path is correct
 import "../components/Newsletter.css";
 import { collection, addDoc } from 'firebase/firestore';
@@ -50,7 +50,7 @@ export default function Newsletter() {
                         <button type="submit" className="cta-btn send-btn">Subscribe</button>
                     </div>
                     <div className="checkbox-container">
-                        {/* Ajoutez l'état isChecked et le gestionnaire onChange à la checkbox */}
+                        
                         <input
                           type="checkbox"
                           checked={isChecked}
@@ -62,4 +62,4 @@ export default function Newsletter() {
             </form>
         </>
     );
-}
+}*/
