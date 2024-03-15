@@ -53,25 +53,6 @@ body {
 .no-scroll {
   overflow-y: hidden;
 }
-
-.section {
-    padding: 80px 10%;
-}
-.section-title {
-  color: var(--white);
-  font-family: Montserrat;
-  font-size: 2vw;
-  font-weight: 800;
-  text-align: center;
-  max-width: 500px;
-}
-.section__text {
-  color: #797979;
-  font-family: var(--inter);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-}
 .cta-btn {
     display: flex;
     padding: 0px 20px 4px 20px;
@@ -93,20 +74,6 @@ body {
 
 
 @media only screen and (max-width: 850px) {
-    .section {
-        padding: 40px 5%;
-    }
-    .section__text {
-      text-align: center;
-      font-size: 16px;
-    }
-    .section-label,
-    .purple-btn,
-    .purple-light-btn {
-      font-size: 16px;
-    }
-    .section-title {
-      font-size: 5vw;
-    }
+
 }
 

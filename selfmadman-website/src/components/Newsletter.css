@@ -1,0 +1,62 @@
+.newsletter-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    align-self: stretch;
+    border-radius: 25px;
+    background: url('../../public/images/newsletter-bg.png') lightgray 50% / cover no-repeat;
+}
+.newsletter-title {
+    color: var(--white);
+    text-align: center;
+    font-family: "TOMO Bossa";
+    font-size: 30px;
+    font-weight: 900;
+}
+.newsletter-text {
+    color: var(--white, #FFF);
+    text-align: center;
+    font-family: var(--outfit);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 145%; /* 26.1px */
+}
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+.newsletter-box input {
+    border-radius: 1px;
+    background: var(--white, #FFF);
+    box-shadow: 3px 3px 0px 0px #FC7200;
+    border: none;
+    width: 420px;
+    height: 44px;
+    padding-left: 14px;
+}
+.send-btn {
+    height: 44px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.newsletter-box input::placeholder {
+    color: rgba(252, 114, 0, 0.50);
+    font-family: var(--outfit);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%; /* 12px */
+}
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+}
+.checkbox-container p {
+    
+}
