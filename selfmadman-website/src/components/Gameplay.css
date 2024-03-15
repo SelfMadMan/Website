@@ -1,0 +1,63 @@
+.gameplay-section {
+    width: 100%;
+}
+.gameplay-separation {
+    transform: translateY(-3px);
+    width: 100vw;
+}
+.gameplay-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+.gameplay-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+}
+
+.gameplay-step {
+    border-radius: 10.5px;
+    border: 1.75px solid #FC7200;
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    color: #1F233C;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15.75px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.gameplay-box h3 {
+    color: #1F233C;
+    text-align: center;
+    font-family: "TOMO Bossa";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 25.2px; /* 100.8% */
+}
+.gameplay-text {
+    color: #1F233C;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25.2px; /* 140% */
+    letter-spacing: 0.154px;
+}
+
+@media only screen and (max-width: 800px) {
+    .gameplay-content {
+        flex-direction: column;
+    }
+}
+
