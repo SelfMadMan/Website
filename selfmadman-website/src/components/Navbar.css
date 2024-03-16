@@ -1,6 +1,6 @@
 .navbar {
-  background-color: var(--dark-blue);
   padding: 15px 8%;
+  z-index: 1000;
 }
   .navbar-content {
     display: flex;
@@ -19,6 +19,10 @@
     font-family: "TOMO Bossa";
     font-size: 18px;
     font-weight: 900;
+  }
+
+  .nav-items a:hover {
+    text-shadow: 2px 2px 0px var(--orange);
   }
   
   .nav-toggle {
@@ -40,6 +44,7 @@
       height: 100%;
       align-items: center;
       display: none;
+      z-index: 1000;
     }
     .navbar-content {
       flex-direction: column;

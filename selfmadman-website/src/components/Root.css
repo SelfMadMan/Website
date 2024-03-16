@@ -68,7 +68,11 @@ body {
     font-size: 21.583px;
     font-weight: 900;
     border: none;
-
+}
+.cta-btn:hover {
+  cursor: pointer;
+  scale: 1.05;
+  transition: ease-in-out;
 }
 .section {
   padding: 80px 12%;
