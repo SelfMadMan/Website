@@ -2,8 +2,47 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp();
 const nodemailer = require('nodemailer');
-const cors = require('cors')({origin: true}); // Import CORS and configure it to allow all origins
+const cors = require('cors')({origin: true}); // Enables CORS for all origins
 const axios = require('axios');
+
+
+
+
+exports.sendEmail = functions.https.onRequest((req, res) => {
+  cors(req, res, async () => { // Correctly apply CORS middleware
+      if (req.method !== 'POST') {
+          return res.status(405).end(); // Method Not Allowed
+      }
+
+      // Your existing logic to send an email
+      const { email } = req.body; // Destructuring for clarity
+
+      const mailTransport = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+              user: 'j.selfmadman@gmail.com',
+              pass: 'cxnj yamf friu bibi', // Consider using environment variables or Firebase config for this
+          },
+      });
+
+      const mailOptions = {
+          from: '"James From SelfMadMan" <j.selfmadman@gmail.com>',
+          to: email,
+          subject: 'Newsletter Subscription!',
+          text: 'You have successfully subscribed to our newsletter.',
+      };
+
+      try {
+          await mailTransport.sendMail(mailOptions);
+          console.log('Mail sent to: ', email);
+          res.status(200).send('Email sent');
+      } catch (error) {
+          console.error('There was an error while sending the email:', error);
+          res.status(500).send('Error sending email');
+      }
+  });
+});
+
 
 exports.translateText = functions.https.onCall(async (data, context) => {
   const text = data.text;
@@ -26,39 +65,3 @@ exports.translateText = functions.https.onCall(async (data, context) => {
     throw new functions.https.HttpsError('internal', error.message);
   }
 });
-
-
-exports.sendEmail = functions.https.onRequest((req, res) => {
-    cors(req, res, async () => { // Make this function async
-        if (req.method !== 'POST') {
-          return res.status(405).send('Method Not Allowed');
-        }
-        // Assuming you're sending data as JSON in a POST request
-        const subscription = req.body;
-        const email = subscription.email;
-      
-        const mailTransport = nodemailer.createTransport({
-          service: 'gmail',
-          auth: {
-            user: 'j.selfmadman@gmail.com',
-            pass: 'jam321MAD*',
-          },
-        });
-      
-        const mailOptions = {
-          from: '"Your Name or Company" <j.selfmadman@gmail.com>',
-          to: email,
-          subject: 'Thank you for subscribing to our newsletter!',
-          text: 'You have successfully subscribed to our newsletter.',
-        };
-      
-        try {
-          await mailTransport.sendMail(mailOptions);
-          console.log('Mail sent to: ', email);
-          return res.status(200).send('Email sent');
-        } catch(error) {
-          console.error('There was an error while sending the email:', error);
-          return res.status(500).send(error);
-        }
-      });
-      });

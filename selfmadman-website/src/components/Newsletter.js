@@ -10,24 +10,44 @@ export default function Newsletter() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         try {
             // Save to Firestore with the isChecked value
-            await addDoc(collection(db, 'subscriptions'), {
+            const docRef = await addDoc(collection(db, 'subscriptions'), {
                 email,
                 subscribedAt: new Date(),
                 acceptsPrivacyPolicy: isChecked // Include isChecked state
             });
-            
+            console.log("Document written with ID: ", docRef.id);
+    
+            // Construct the URL for your sendEmail Cloud Function
+            const sendEmailResponse = await fetch('https://us-central1-selfmadman-49e4b.cloudfunctions.net/sendEmail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: email }) // Ensure this matches the expected format of your Cloud Function
+            });
+    
+            if (!sendEmailResponse.ok) {
+                throw new Error('Failed to send email');
+            }
+            else{
+                console.log("Email Sent");
+            }
+    
             alert('Subscription successful! Check your email for confirmation.');
         } catch (error) {
             console.error("Error during subscription process", error);
             alert('There was an issue with your subscription. Please try again.');
         }
+    
+        setEmail(''); // Resetting the state
+        setIsChecked(false);
+    };    
 
-        setEmail(''); // Reset the email field after submission
-        setIsChecked(false); // Optionally reset the checkbox state
-    };
+
+
 
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked); // Toggle checkbox state
