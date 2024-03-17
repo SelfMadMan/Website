@@ -5,9 +5,6 @@ const nodemailer = require('nodemailer');
 const cors = require('cors')({origin: true}); // Enables CORS for all origins
 const axios = require('axios');
 
-
-
-
 exports.sendEmail = functions.https.onRequest((req, res) => {
   cors(req, res, async () => { // Correctly apply CORS middleware
       if (req.method !== 'POST') {
@@ -43,6 +40,61 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
   });
 });
 
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+      user: 'j.selfmadman@gmail.com',
+      pass: 'cxnj yamf friu bibi', // Consider using environment variables or Firebase config for this
+  },
+});
+
+exports.NewsletterTemplate = functions.https.onRequest((req, res) => {
+  cors(req, res, async () => {
+
+    try {
+      // Ensure that the request is authenticated
+      // Example: You can use Firebase Authentication to verify the request's authorization token
+
+      if (req.method !== 'POST') {
+        return res.status(405).send('Method Not Allowed');
+      }
+
+      // Fetch subscriptions data from Firestore
+      const snapshot = await admin.firestore().collection('subscriptions').get();
+      const users = snapshot.docs.map(doc => doc.data());
+
+      // Create transporter
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+
+
+        
+        auth: {
+          user: 'j.selfmadman@gmail.com',
+          pass: 'cxnj yamf friu bibi', // Consider using environment variables or Firebase config for this
+        },
+      });
+
+      // Send emails
+      const emailPromises = users.map(user => {
+        return transporter.sendMail({
+          from: 'j.selfmadman@gmail.com',
+          to: user.email,
+          subject: 'Email Campaign',
+          html: req.body.emailContent, // Using the HTML content passed from the frontend
+        });
+      });
+
+      await Promise.all(emailPromises);
+
+      // Return the count of emails sent
+      res.json({ count: users.length });
+    } catch (error) {
+      console.error('Error sending emails:', error);
+      res.status(500).send('Error sending emails');
+    }
+  });
+});
 
 exports.translateText = functions.https.onCall(async (data, context) => {
   const text = data.text;
