@@ -27,7 +27,6 @@ export default function Gameplay() {
                         <p className="gameplay-text">Achievement of wealth and ultimate personal fulfillment.</p>
                     </div>
                 </div>
-                <img src='./images/gameplay-separation-white.png' className="gameplay-separation"></img>
 
            </div>
         </>
