@@ -1,19 +1,22 @@
-/*import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { db } from '../firebaseconfig'; // Ensure this path is correct
 import "../components/Newsletter.css";
 import { collection, addDoc } from 'firebase/firestore';
+import { useLanguage } from '../languageContext'; // Adjust the import path as necessary
 
 export default function Newsletter() {
     const [email, setEmail] = useState('');
+    const [isChecked, setIsChecked] = useState(false); // State for checkbox
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         try {
-            // Save to Firestore
+            // Save to Firestore with the isChecked value
             await addDoc(collection(db, 'subscriptions'), {
                 email,
-                subscribedAt: new Date()
+                subscribedAt: new Date(),
+                acceptsPrivacyPolicy: isChecked // Include isChecked state
             });
             
             alert('Subscription successful! Check your email for confirmation.');
@@ -23,43 +26,61 @@ export default function Newsletter() {
         }
 
         setEmail(''); // Reset the email field after submission
+        setIsChecked(false); // Optionally reset the checkbox state
     };
-    // Créer un état pour gérer si la checkbox est cochée ou non, initialisé à false
-    const [isChecked, setIsChecked] = useState(false);
 
-    // Fonction pour changer l'état lorsqu'on clique sur la checkbox
     const handleCheckboxChange = () => {
-        setIsChecked(!isChecked); // Inverse l'état précédent
+        setIsChecked(!isChecked); // Toggle checkbox state
     };
+    const newsletterTranslations = {
+        EN: {
+          title: "Zero to Hero in one email: the newsletter that changes everything!",
+          description: "Sign up for early access to the game and exclusive information on the progress of Self Mad Man. We promise we won't sell you online training.",
+          emailPlaceholder: "Enter your email",
+          subscribeButton: "Subscribe",
+          acceptPolicy: "I accept the Privacy Policy",
+        },
+        // Add to src/translations/newsletterTranslations.js
+FR: {
+    title: "De Zéro à Héros en un email : la newsletter qui change tout !",
+    description: "Inscrivez-vous pour un accès anticipé au jeu et des informations exclusives sur l'avancement de Self Mad Man. Nous promettons de ne pas vous vendre de formation en ligne.",
+    emailPlaceholder: "Entrez votre email",
+    subscribeButton: "S'abonner",
+    acceptPolicy: "J'accepte la Politique de Confidentialité",
+  },
+  
+        // Add more languages as needed
+      };    
+      const { language } = useLanguage(); // Use the current language
 
+      const { title, description, emailPlaceholder, subscribeButton, acceptPolicy } = newsletterTranslations[language]; // Get translations
 
     return (
         <>
             <form className="newsletter-container" onSubmit={handleSubmit}>
-            <h2 className='newsletter-title'>Zero to Hero in one email: the newsletter that changes everything!</h2>
-                <p className='newsletter-text'>Notre newsletter est votre première étape vers le succès. Soyez informés du lancement et démarrez votre transformation de zéro à héros.</p>
+                <h2 className='newsletter-title'>{title}</h2>
+                <p className='newsletter-text'>{description}</p>
                 <div className="newsletter-content">
                     <div className="newsletter-box">
                         <input 
                           type="email"
-                          placeholder="Enter your email"
+                          placeholder={emailPlaceholder}
                           value={email}
                           onChange={(e) => setEmail(e.target.value)} 
                           required
                         />
-                        <button type="submit" className="cta-btn send-btn">Subscribe</button>
+                        <button type="submit" className="cta-btn send-btn">{subscribeButton}</button>
                     </div>
                     <div className="checkbox-container">
-                        
                         <input
                           type="checkbox"
                           checked={isChecked}
                           onChange={handleCheckboxChange}
                         />
-                        <p>I accept <span><a className="checkbox-link" href="">Privacy Policy</a></span> <span className="checkbox-link">*</span></p>
-                </div>
+                        <p>{acceptPolicy} <span className="checkbox-link">*</span></p>
+                    </div>
                 </div>
             </form>
         </>
     );
-}*/
+}

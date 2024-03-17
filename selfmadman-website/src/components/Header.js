@@ -1,18 +1,35 @@
 import "../components/Header.css"
 import Navbar from "../components/Navbar";
+import { useLanguage } from '../languageContext'; // Adjust the import path as necessary
 
 
-export default function Header() {
+const headerTranslations = {
+    EN: {
+      slogan: "From Zero to Hero: Transform your life with Inspiration and Success, one mini-game at a time.",
+      cta: "Get Notified",
+    },
+    FR: { // Example of German translations
+      slogan: "De Zéro à Idiot : Transformez votre vie grâce à la motivation et à l’ambition, un mini-jeu à la fois.",
+      cta: "S'inscrire",
+    },
+    // Add more languages as needed
+  };
+
+  export default function Header() {
+    const { language } = useLanguage(); // Use the current language
+    const { slogan, cta } = headerTranslations[language]; // Get translations based on current language
+
     return (
         <>
-        <div className="header-container">
-            <Navbar />
-            <div className="header-content">
-                <img src="./images/header-logo.png"/>
-                <p>From Zero to Hero: Transform your life with Inspiration and Success, one mini-game at a time.</p>
-                <button className="cta-btn">Get Notified</button>
-            </div>
-            <div className="header-socials">
+            <div className="header-container">
+                <Navbar />
+                <div className="header-content">
+                    <img src="./images/header-logo.png" alt="Header Logo" />
+                    <p>{slogan}</p>
+                    <button className="cta-btn">{cta}</button>
+                </div>
+                
+                <div className="header-socials">
                 <a href="https://www.instagram.com/selfmadman_/" target="__blank"><i class="bi bi-instagram"></i></a>
                 <a href="https://twitter.com/selfmadman_" target="__blank"><i class="bi bi-twitter-x"></i></a>
                 <a href="https://www.tiktok.com/@selfmadman_" target="__blank"><i class="bi bi-tiktok"></i></a>
