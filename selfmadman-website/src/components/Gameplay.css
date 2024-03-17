@@ -10,6 +10,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
 }
 .gameplay-box {
     display: flex;
