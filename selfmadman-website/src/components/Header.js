@@ -1,5 +1,4 @@
 import "../components/Header.css"
-import Navbar from "../components/Navbar";
 import { useLanguage } from '../languageContext'; // Adjust the import path as necessary
 
 
@@ -22,7 +21,6 @@ const headerTranslations = {
     return (
         <>
             <div className="header-container">
-                <Navbar />
                 <div className="header-content">
                     <img src="./images/header-logo.png" alt="Header Logo" />
                     <p>{slogan}</p>

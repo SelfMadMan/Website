@@ -5,8 +5,11 @@
 
 .navbar {
   padding: 15px 8%;
-  z-index: 1000;
+  z-index: 10000;
+  position: sticky;
+  top: 0;
 }
+
   .navbar-content {
     display: flex;
     gap: 50px;
@@ -37,6 +40,12 @@
     font-size: 1.5rem;
     color: var(--white);
   }
+  .navbar.nav-bg-dark-blue, .nav-items.open {
+    background-color: var(--dark-blue);
+  }
+
+  
+
   
   @media (max-width: 768px) {
     .nav-items {
@@ -60,6 +69,7 @@
       justify-content: flex-start;
       gap: 50px;
       padding-top: 100px;
+      height: 100vh;
     }
     .nav-toggle {
       display: flex;
