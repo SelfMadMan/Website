@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'TOMOBossaBlack';
+    src: url('../fonts/TOMOBossaBlack.ttf') format('truetype');
+  }
+  
 .gameplay-section {
     width: 100%;
 }
@@ -41,7 +46,7 @@
 .gameplay-box h3 {
     color: #1F233C;
     text-align: center;
-    font-family: "TOMO Bossa";
+    font-family: "TOMOBossaBlack";
     font-size: 25px;
     font-style: normal;
     font-weight: 900;

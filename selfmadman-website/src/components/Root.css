@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@font-face {
+  font-family: 'TOMOBossaBlack';
+  src: url('../fonts/TOMOBossaBlack.ttf') format('truetype');
+}
 
 :root {
 
@@ -64,7 +68,7 @@ body {
     box-shadow: 3.2px 3.2px 0px 0px #FC7200;
     color: var(--white, #FFF);
     text-align: center;
-    font-family: "TOMO Bossa";
+    font-family: "TOMOBossaBlack";
     font-size: 21.583px;
     font-weight: 900;
     border: none;

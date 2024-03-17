@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'TOMOBossaBlack';
+    src: url('../fonts/TOMOBossaBlack.ttf') format('truetype');
+  }
+  
 .newsletter-container {
     width: 80%;
     margin: auto;
@@ -13,7 +18,7 @@
 .newsletter-title {
     color: var(--white);
     text-align: center;
-    font-family: "TOMO Bossa";
+    font-family: "TOMOBossaBlack";
     font-size: 30px;
     font-weight: 900;
 }

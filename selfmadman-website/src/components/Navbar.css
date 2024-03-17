@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'TOMOBossaBlack';
+  src: url('../fonts/TOMOBossaBlack.ttf') format('truetype');
+}
+
 .navbar {
   padding: 15px 8%;
   z-index: 1000;
@@ -16,7 +21,7 @@
   .nav-items a {
     color: var(--white);
     text-align: center;
-    font-family: "TOMO Bossa";
+    font-family: "TOMOBossaBlack";
     font-size: 18px;
     font-weight: 900;
   }
