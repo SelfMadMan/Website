@@ -4,6 +4,16 @@ admin.initializeApp();
 const nodemailer = require('nodemailer');
 const cors = require('cors')({origin: true}); // Enables CORS for all origins
 const axios = require('axios');
+const nodemailerConfig = functions.config().nodemailer;
+const deepl = functions.config().deepl;
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: nodemailerConfig.user,
+    pass: nodemailerConfig.pass,
+},
+});
 
 exports.sendEmail = functions.https.onRequest((req, res) => {
   cors(req, res, async () => { // Correctly apply CORS middleware
@@ -17,9 +27,9 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
       const mailTransport = nodemailer.createTransport({
           service: 'gmail',
           auth: {
-              user: 'j.selfmadman@gmail.com',
-              pass: 'cxnj yamf friu bibi', // Consider using environment variables or Firebase config for this
-          },
+            user: nodemailerConfig.user,
+            pass: nodemailerConfig.pass,
+                  },
       });
 
       const mailOptions = {
@@ -38,14 +48,6 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
           res.status(500).send('Error sending email');
       }
   });
-});
-
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-      user: 'j.selfmadman@gmail.com',
-      pass: 'cxnj yamf friu bibi', // Consider using environment variables or Firebase config for this
-  },
 });
 
 exports.NewsletterTemplate = functions.https.onRequest((req, res) => {
@@ -70,9 +72,9 @@ exports.NewsletterTemplate = functions.https.onRequest((req, res) => {
 
         
         auth: {
-          user: 'j.selfmadman@gmail.com',
-          pass: 'cxnj yamf friu bibi', // Consider using environment variables or Firebase config for this
-        },
+          user: nodemailerConfig.user,
+          pass: nodemailerConfig.pass,
+              },
       });
 
       // Send emails
@@ -99,7 +101,7 @@ exports.NewsletterTemplate = functions.https.onRequest((req, res) => {
 exports.translateText = functions.https.onCall(async (data, context) => {
   const text = data.text;
   const targetLang = data.targetLang;
-  const apiKey = 'a52dcf93-8f1c-4442-bf10-2c949af36965:fx'; // Set this using Firebase CLI
+  const apiKey = deepl.key; // Set this using Firebase CLI
 
   try {
     const response = await axios({
