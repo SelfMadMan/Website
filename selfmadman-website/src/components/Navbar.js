@@ -9,11 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -43,10 +39,10 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
-  const handleLinkClick = () => {
-    setIsOpen(false); // Close the mobile menu
-  };
+  const handleLinkClick = () => setIsOpen(false); // Close the mobile menu
 
+  // Ajouter une classe basée sur l'état isOpen
+  const navbarClass = `navbar ${isOpen ? 'fixed' : 'sticky'} ${isOpen || isScrolled ? 'nav-bg-dark-blue' : ''}`;
   return (
     <nav className={`navbar ${isOpen || isScrolled ? 'nav-bg-dark-blue' : ''}`}>
       <div className={`nav-items ${isOpen && 'open'}`}>

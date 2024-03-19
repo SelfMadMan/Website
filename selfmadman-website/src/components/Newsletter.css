@@ -2,10 +2,14 @@
     font-family: 'TOMOBossaBlack';
     src: url('../fonts/TOMOBossaBlack.ttf') format('truetype');
   }
-  
+.newsletter-section {
+    width: 100%;
+    background-color: var(--white);
+    padding: 50px 0;
+} 
 .newsletter-container {
     width: 80%;
-    margin: 50px auto;
+    margin: auto;
     display: flex;
     padding: 50px;
     flex-direction: column;

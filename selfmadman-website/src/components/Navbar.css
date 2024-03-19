@@ -5,10 +5,16 @@
 
 .navbar {
   padding: 15px 8%;
-  z-index: 10000;
+  z-index: 1001;
   position: sticky;
   top: 0;
 }
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%; /* Assurez-vous que la navbar s'étend sur toute la largeur */
+}
+
 
   .navbar-content {
     display: flex;

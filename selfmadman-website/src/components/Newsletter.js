@@ -79,30 +79,33 @@ FR: {
 
     return (
         <>
+        <div className='newsletter-section'>
             <form className="newsletter-container" onSubmit={handleSubmit}>
-                <h2 className='newsletter-title'>{title}</h2>
-                <p className='newsletter-text'>{description}</p>
-                <div className="newsletter-content">
-                    <div className="newsletter-box">
-                        <input 
-                          type="email"
-                          placeholder={emailPlaceholder}
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)} 
-                          required
-                        />
-                        <button type="submit" className="cta-btn send-btn">{subscribeButton}</button>
+                    <h2 className='newsletter-title'>{title}</h2>
+                    <p className='newsletter-text'>{description}</p>
+                    <div className="newsletter-content">
+                        <div className="newsletter-box">
+                            <input 
+                            type="email"
+                            placeholder={emailPlaceholder}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)} 
+                            required
+                            />
+                            <button type="submit" className="cta-btn send-btn">{subscribeButton}</button>
+                        </div>
+                        <div className="checkbox-container">
+                            <input
+                            type="checkbox"
+                            checked={isChecked}
+                            onChange={handleCheckboxChange}
+                            />
+                            <p>{acceptPolicy} <a href='/privacy' target='__blank'>{policyLink}</a> <span className="checkbox-link">*</span></p>
+                        </div>
                     </div>
-                    <div className="checkbox-container">
-                        <input
-                          type="checkbox"
-                          checked={isChecked}
-                          onChange={handleCheckboxChange}
-                        />
-                        <p>{acceptPolicy} <a href='/privacy' target='__blank'>{policyLink}</a> <span className="checkbox-link">*</span></p>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
+
         </>
     );
 }

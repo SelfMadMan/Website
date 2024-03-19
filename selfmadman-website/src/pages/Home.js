@@ -5,17 +5,18 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
-import LanguageSelector from "../components/languageselector";
+import LanguageSelector from "../components/languageselector"; 
+
 export default function Home() {
     return (
-        <>
-            <Navbar/>
+        <div style={{ backgroundColor: "var(--dark-blue)" }}> 
+            <Navbar />
             <Header />
             <Hero />
             <Gameplay />
             <Eras />
             <Newsletter />
             <Footer />
-        </>
-    )
+        </div>
+    );
 }

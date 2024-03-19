@@ -5,6 +5,7 @@
   
 .gameplay-section {
     width: 100%;
+    background-color: var(--white);
 }
 .gameplay-separation {
     transform: translateY(-3px);
