@@ -81,45 +81,45 @@ export default function Newsletter() {
     const { title, description, emailPlaceholder, subscribeButton, acceptPolicy, policyLink } = newsletterTranslations[language]; // Get translations
 
     // Simple email validation function
-const isValidEmail = (email) => {
-    return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email);
-};
-const [isSubmitted, setIsSubmitted] = useState(false);
+    const isValidEmail = (email) => {
+        return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email);
+    };
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
-return (
-    <>
-        <div className='newsletter-section'>
-            <form className="newsletter-container" onSubmit={handleSubmit}>
-                <h2 className='newsletter-title'>{title}</h2>
-                <p className='newsletter-text'>{description}</p>
-                <div className="newsletter-content">
-                    <div className="newsletter-box">
-                        <input
-                            type="email"
-                            placeholder={emailPlaceholder}
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-<button
-    type="submit"
-    className={`cta-btn send-btn ${isValidEmail(email) && !isSubmitted ? '' : 'disabled'}`} // Update className logic as needed
-    disabled={!isValidEmail(email) || isSubmitted} // Button should be disabled if email is invalid or form is already submitted
->
-    {isSubmitted ? <i class="bi bi-send-check"></i> : subscribeButton}
-</button>                    </div>
-                    <div className="checkbox-container">
-                        <input
-                            type="checkbox"
-                            checked={isChecked}
-                            onChange={handleCheckboxChange}
-                        />
-                        <p>{acceptPolicy} <a href='/privacy' target='__blank'>{policyLink}</a> <span className="checkbox-link">*</span></p>
+    return (
+        <>
+            <div className='newsletter-section'>
+                <form className="newsletter-container" onSubmit={handleSubmit}>
+                    <h2 className='newsletter-title'>{title}</h2>
+                    <p className='newsletter-text'>{description}</p>
+                    <div className="newsletter-content">
+                        <div className="newsletter-box">
+                            <input
+                                type="email"
+                                placeholder={emailPlaceholder}
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                            <button
+                                type="submit"
+                                className={`cta-btn send-btn ${isValidEmail(email) && !isSubmitted ? '' : 'disabled'}`} // Update className logic as needed
+                                disabled={!isValidEmail(email) || isSubmitted} // Button should be disabled if email is invalid or form is already submitted
+                            >
+                                {isSubmitted ? <i class="bi bi-send-check"></i> : subscribeButton}
+                            </button>                    </div>
+                        <div className="checkbox-container">
+                            <input
+                                type="checkbox"
+                                checked={isChecked}
+                                onChange={handleCheckboxChange}
+                            />
+                            <p>{acceptPolicy} <a href='/privacy' target='__blank'>{policyLink}</a> <span className="checkbox-link">*</span></p>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
-    </>
-);
+                </form>
+            </div>
+        </>
+    );
 
 }
