@@ -97,6 +97,8 @@ body {
   font-size: 21.583px;
   font-weight: 900;
   border: none;
+  cursor: not-allowed !important; 
+
 }
 .parallax-coin {
   transition: transform 0.2s ease-out;

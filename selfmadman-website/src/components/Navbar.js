@@ -2,10 +2,25 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import './Root.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { useLanguage } from '../languageContext'; // Adjust the import path as necessary
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+
+  const heroTranslations = {
+    EN: {
+      
+      cta: "Get Notified",
+    },
+    // Add to src/translations/heroTranslations.js
+    FR: {
+      cta: "S'inscrire",
+    },
+  };
+  const { language } = useLanguage(); // Use the current language
+  const { cta } = heroTranslations[language]; // Get translations
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,13 +62,13 @@ const Navbar = () => {
     <nav className={`navbar ${isOpen || isScrolled ? 'nav-bg-dark-blue' : ''}`}>
       <div className={`nav-items ${isOpen && 'open'}`}>
         <div className='navbar-content'>
-            <a href="#presentation" onClick={handleLinkClick}>Presentation</a>
-            <a href="#gameplay" onClick={handleLinkClick}>Gameplay</a>
-            <a href="#newsletter" onClick={handleLinkClick}>Newsletter</a>
-        </div>  
-        <button className='cta-btn'>Get Notified</button>
+          <a href="#presentation" onClick={handleLinkClick}>Presentation</a>
+          <a href="#gameplay" onClick={handleLinkClick}>Gameplay</a>
+          <a href="#newsletter" onClick={handleLinkClick}>Newsletter</a>
+        </div>
+        <button className='cta-btn'>{cta}</button>
       </div>
-      
+
       <button className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
         <i className={isOpen ? 'bi bi-x-lg' : 'bi bi-list'}></i>
       </button>
