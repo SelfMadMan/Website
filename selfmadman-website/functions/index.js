@@ -12,44 +12,35 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: nodemailerConfig.user,
     pass: nodemailerConfig.pass,
-},
+  },
 });
 
 exports.sendEmail = functions.https.onRequest((req, res) => {
-  cors(req, res, async () => { // Correctly apply CORS middleware
-      if (req.method !== 'POST') {
-          return res.status(405).end(); // Method Not Allowed
-      }
+  cors(req, res, async () => {
+    if (req.method !== 'POST') {
+      return res.status(405).end();
+    }
 
-      // Your existing logic to send an email
-      const { email } = req.body; // Destructuring for clarity
+    const { email } = req.body;
 
-      const mailTransport = nodemailer.createTransport({
-          service: 'gmail',
-          auth: {
-            user: nodemailerConfig.user,
-            pass: nodemailerConfig.pass,
-                  },
-      });
+    const mailOptions = {
+      from: '"James From SelfMadMan" <j.selfmadman@gmail.com>',
+      to: email,
+      subject: 'Newsletter Subscription!',
+      text: 'You have successfully subscribed to our newsletter.',
+    };
 
-      const mailOptions = {
-          from: '"James From SelfMadMan" <j.selfmadman@gmail.com>',
-          to: email,
-          subject: 'Newsletter Subscription!',
-          text: 'You have successfully subscribed to our newsletter.',
-      };
-
-      try {
-          await mailTransport.sendMail(mailOptions);
-          console.log('Mail sent to: ', email);
-          res.status(200).send('Email sent');
-      } catch (error) {
-          console.error('There was an error while sending the email:', error);
-          res.status(500).send('Error sending email');
-      }
+    try {
+      await transporter.sendMail(mailOptions);
+      console.log('Mail sent to: ', email);
+      res.status(200).send('Email sent');
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      res.status(500).send('Error sending email: ' + error.toString());
+    }
+    
   });
 });
-
 exports.NewsletterTemplate = functions.https.onRequest((req, res) => {
   cors(req, res, async () => {
 
