@@ -62,6 +62,64 @@
     transform: translateY(-40%);
 }
 
+.header-coin-1 {
+    position: absolute;
+    width: 98px;
+    height: auto;
+    top: 175px;
+    left: -36px;
+    transform: rotate(20.318deg);
+}
+.header-coin-2 {
+    position: absolute;
+    width: 68px;
+    height: auto;
+    top: 300px;
+    left: 30%;
+}
+.header-coin-3 {
+    position: absolute;
+    width: 52px;
+    height: auto;
+    top: 250px;
+    right: 30%;
+}
+.header-coin-4 {
+    position: absolute;
+    width: 98px;
+    height: auto;
+    top: 83px;
+    right: -50px;
+}
+.header-coin-5 {
+    position: absolute;
+    width: 61px;
+    height: auto;
+    left: 32px;
+    bottom: 216px;
+}
+.header-coin-6 {
+    position: absolute;
+    width: 61px;
+    height: auto;
+    right: 25%;
+    bottom: 60px;
+}
+.header-coin-7 {
+    position: absolute;
+    width: 61px;
+    height: auto;
+    left: 35%;
+    bottom: -15px;
+}
+.header-coin-8 {
+    position: absolute;
+    width: 61px;
+    height: auto;
+    right: -28px;
+    bottom: 40%;
+}
+
 @media only screen and (min-width: 551px) and (max-width: 850px) {
     .header-james {
         scale: 0.8;

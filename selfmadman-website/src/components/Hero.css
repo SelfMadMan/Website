@@ -55,41 +55,40 @@
 
 .hero-coin-1 {
     position: absolute;
-    width: 21px;
+    width: 31px;
     height: auto;
-    top: 23px;
     left: 128px;
 }
 .hero-coin-2 {
     position: absolute;
-    width: 21px;
+    width: 31px;
     height: auto;
     top: 157px;
     left: 50%;
 }
 .hero-coin-3 {
     position: absolute;
-    width: 42px;
+    width: 52px;
     height: auto;
     top: 5px;
     right: -14px;
 }
 .hero-coin-4 {
     position: absolute;
-    width: 42px;
+    width: 52px;
     height: auto;
     top: 40%;
     left: -14px;
 }
 .hero-coin-5 {
     position: absolute;
-    width: 21px;
+    width: 31px;
     height: auto;
     bottom: 95px;
 }
 .hero-coin-6 {
     position: absolute;
-    width: 21px;
+    width: 31px;
     height: auto;
     right: 79px;
     bottom: 154px;

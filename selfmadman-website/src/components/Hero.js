@@ -32,6 +32,15 @@ FR: {
   const { language } = useLanguage(); // Use the current language
   const { title, paragraphs, cta } = heroTranslations[language]; // Get translations
 
+  document.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+
+    document.querySelectorAll('.parallax-coin').forEach((coin, index) => {
+        const depth = index % 2 === 0 ? 20 : -20; // Alternance de direction pour l'effet
+        const movement = (scrollPosition * depth) / 500;
+        coin.style.transform = `translateY(${movement}px)`;
+    });
+});
   return (
       <>
          <div className='hero-section section'>
@@ -47,12 +56,12 @@ FR: {
           <div className="img-container">
               <img src="./images/hero-section-img.png" className="phone-mockup" alt="Hero Section Mockup"></img>
           </div>
-                <img src="./images/coin-3.png" className="hero-coin-1"></img>
-                <img src="./images/coin-4.png" className="hero-coin-2"></img>
-                <img src="./images/coin-5.png" className="hero-coin-3"></img>
-                <img src="./images/coin-1.png" className="hero-coin-4"></img>
-                <img src="./images/coin-8.png" className="hero-coin-5"></img>
-                <img src="./images/coin-10.png" className="hero-coin-6"></img>
+                <img src="./images/madcoin-face.png" className="hero-coin-1 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="hero-coin-2 parallax-coin"></img>
+                <img src="./images/madcoin-face.png" className="hero-coin-3 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="hero-coin-4 parallax-coin"></img>
+                <img src="./images/madcoin-face.png" className="hero-coin-5 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="hero-coin-6 parallax-coin"></img>
 
            </div>
         </>

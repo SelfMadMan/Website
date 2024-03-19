@@ -1,6 +1,8 @@
 .eras-container {
     width: 100%;
     background: #1F233C;
+    max-height: 99vh;
+    padding-bottom: 25px;
 }
 .eras-separation {
     transform: translateY(-3px);

@@ -39,6 +39,16 @@ const headerTranslations = {
                 <img src="./images/header-james-2.png"/>
             </div>
 
+            <img src="./images/madcoin-face.png" className="header-coin-1 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="header-coin-2 parallax-coin"></img>
+                <img src="./images/madcoin-face.png" className="header-coin-3 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="header-coin-4 parallax-coin"></img>
+                <img src="./images/madcoin-face.png" className="header-coin-5 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="header-coin-6 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="header-coin-7 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="header-coin-8 parallax-coin"></img>
+
+
         </div>
            
            
