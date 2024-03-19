@@ -58,7 +58,8 @@ export default function Newsletter() {
           description: "Sign up for early access to the game and exclusive information on the progress of Self Mad Man. We promise we won't sell you online training.",
           emailPlaceholder: "Enter your email",
           subscribeButton: "Subscribe",
-          acceptPolicy: "I accept the Privacy Policy",
+          acceptPolicy: "I accept the ",
+          policyLink:"Privacy Policy",
         },
         // Add to src/translations/newsletterTranslations.js
 FR: {
@@ -66,14 +67,15 @@ FR: {
     description: "Inscrivez-vous pour un accès anticipé au jeu et des informations exclusives sur l'avancement de Self Mad Man. Nous promettons de ne pas vous vendre de formation en ligne.",
     emailPlaceholder: "Entrez votre email",
     subscribeButton: "S'abonner",
-    acceptPolicy: "J'accepte la Politique de Confidentialité",
+    acceptPolicy: "J'accepte la ",
+    policyLink:"Politique de Confidentialité",
   },
   
         // Add more languages as needed
       };    
       const { language } = useLanguage(); // Use the current language
 
-      const { title, description, emailPlaceholder, subscribeButton, acceptPolicy } = newsletterTranslations[language]; // Get translations
+      const { title, description, emailPlaceholder, subscribeButton, acceptPolicy, policyLink } = newsletterTranslations[language]; // Get translations
 
     return (
         <>
@@ -97,7 +99,7 @@ FR: {
                           checked={isChecked}
                           onChange={handleCheckboxChange}
                         />
-                        <p>{acceptPolicy} <span className="checkbox-link">*</span></p>
+                        <p>{acceptPolicy} <a href='/privacy' target='__blank'>{policyLink}</a> <span className="checkbox-link">*</span></p>
                     </div>
                 </div>
             </form>

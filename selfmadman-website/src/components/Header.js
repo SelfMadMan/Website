@@ -31,8 +31,8 @@ const headerTranslations = {
                 <a href="https://www.instagram.com/selfmadman_/" target="__blank"><i class="bi bi-instagram"></i></a>
                 <a href="https://twitter.com/selfmadman_" target="__blank"><i class="bi bi-twitter-x"></i></a>
                 <a href="https://www.tiktok.com/@selfmadman_" target="__blank"><i class="bi bi-tiktok"></i></a>
-                <a href="https://youtube.com/@Selfmadman_?si=LvlL4kOfbUT8KbwQ" target="__blank"> <i class="bi bi-youtube"></i></a>
-                <a href="https://www.linkedin.com/in/chad-motivation-1930ab2b7/" target="__blank"> <i class="bi bi-linkedin"></i></a>
+                <a href="https://youtube.com/@Selfmadman_?si=LvlL4kOfbUT8KbwQ" target="__blank"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/chad-motivation-1930ab2b7/" target="__blank"><i class="bi bi-linkedin"></i></a>
             </div>
             <div className="header-james">
                 <img src="./images/header-james-1.png"/>

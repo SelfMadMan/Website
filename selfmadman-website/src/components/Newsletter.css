@@ -5,7 +5,7 @@
   
 .newsletter-container {
     width: 80%;
-    margin: auto;
+    margin: 50px auto;
     display: flex;
     padding: 50px;
     flex-direction: column;
@@ -30,6 +30,11 @@
     font-weight: 300;
     line-height: 145%; /* 26.1px */
 }
+.newsletter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 .newsletter-box {
     display: flex;
     align-items: center;
@@ -50,7 +55,7 @@
     padding-right: 35px;
 }
 .newsletter-box input::placeholder {
-    color: rgba(252, 114, 0, 0.50);
+    color: #1f233cc2;
     font-family: var(--outfit);
     font-size: 12px;
     font-weight: 500;
@@ -62,6 +67,58 @@
     align-items: center;
     gap: 13px;
 }
-.checkbox-container p {
-    
+.checkbox-container p,
+.checkbox-container p a {
+    color: #9C9C9C;
+    font-family: var(--outfit);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
 }
+.checkbox-container p span {
+    color: var(--yellow);
+}
+.checkbox-container p a {
+    text-decoration: underline;
+}
+
+  
+  .checkbox-container input {
+    cursor: pointer;
+  }
+
+  @media only screen and (min-width: 425px) and (max-width: 900px) {
+    .newsletter-box input  {
+        width: 350px;
+    }
+    .send-btn {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .newsletter-container {
+        width: 95%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .newsletter-box {
+        flex-direction: column;
+    }
+    .newsletter-container {
+        padding: 25px;
+    }
+    .newsletter-title {
+        font-size: 25px;
+    }
+    .newsletter-text {
+        font-size: 16px;
+    }
+  }
+  @media only screen and (max-width: 424px) {
+    .newsletter-box input  {
+        width: 300px;
+    }
+  }

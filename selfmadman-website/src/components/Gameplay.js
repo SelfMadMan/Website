@@ -58,7 +58,6 @@ FR: {
                           </div>
                       ))}
                   </div>
-                  <img src='./images/gameplay-separation-white.png' className="gameplay-separation" alt="Gameplay Separator"></img>
              </div>
            
         </>

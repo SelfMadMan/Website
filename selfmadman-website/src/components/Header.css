@@ -45,11 +45,11 @@
     left: 36px; 
     transform: translateY(-50%);
 }
-.header-socials i::before {
+.header-socials a i::before {
     font-size: 25px;
     color: var(--white);
 }
-.header-socials i:hover::before {
+.header-socials a i:hover::before {
     text-shadow: 2px 2px 0px var(--orange);
 }
 .header-james {
