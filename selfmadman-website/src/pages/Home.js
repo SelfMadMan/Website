@@ -1,3 +1,4 @@
+import CookiePopup from "../components/CookiePopup";
 import Eras from "../components/Eras";
 import Footer from "../components/Footer";
 import Gameplay from "../components/Gameplay";
@@ -17,6 +18,7 @@ export default function Home() {
             <Eras />
             <Newsletter />
             <Footer />
+            <CookiePopup />
         </div>
     );
 }

@@ -24,7 +24,7 @@ const headerTranslations = {
                 <div className="header-content">
                     <img src="./images/header-logo.png" alt="Header Logo" />
                     <p>{slogan}</p>
-                    <button className="cta-btn">{cta}</button>
+                    <a className="cta-btn" href="#newsletter">{cta}</a>
                 </div>
                 
                 <div className="header-socials">

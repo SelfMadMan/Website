@@ -24,6 +24,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    overflow: hidden;
     
 }
 
@@ -73,6 +74,7 @@ body {
     font-size: 21.583px;
     font-weight: 900;
     border: none;
+    z-index: 100;
 }
 .cta-btn:hover {
   cursor: pointer;
@@ -97,6 +99,8 @@ body {
   font-size: 21.583px;
   font-weight: 900;
   border: none;
+  cursor: not-allowed !important; 
+
 }
 .parallax-coin {
   transition: transform 0.2s ease-out;
@@ -108,6 +112,9 @@ body {
 @media only screen and (max-width: 850px) {
   .section {
     padding: 30px 5%;
+  }
+  .parallax-coin {
+    scale: 0.5;
   }
 }
 

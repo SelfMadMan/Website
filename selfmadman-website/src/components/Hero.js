@@ -43,7 +43,7 @@ FR: {
 });
   return (
       <>
-         <div className='hero-section section'>
+         <div className='hero-section section' id="presentation">
           <div className="hero-content">
               <h2>{title}</h2>
               <div className="hero-content-p">
@@ -51,7 +51,7 @@ FR: {
                       <p key={index}>{paragraph}</p>
                   ))}
               </div>
-              <button className='cta-btn'>{cta}</button>
+              <a className='cta-btn' href='#newsletter'>{cta}</a>
           </div>
           <div className="img-container">
               <img src="./images/hero-section-img.png" className="phone-mockup" alt="Hero Section Mockup"></img>

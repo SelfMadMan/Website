@@ -1,0 +1,38 @@
+/* CookiePopup.css */
+.cookie-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000; /* Assurez-vous qu'elle est au-dessus d'autres éléments */
+  }
+  
+  .cookie-popup p {
+    margin: 0;
+    font-size: 14px;
+    font-family: var(--outfit);
+    color: var(--dark-blue);
+  }
+  
+
+  .cookie-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+
+  @media only screen and (max-width: 450px)  {
+    .cookie-popup {
+        width: 100%;
+        flex-direction: column;
+    }
+  }
