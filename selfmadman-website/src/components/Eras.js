@@ -62,6 +62,15 @@ export default function Eras() {
                           ))}
                       </div>
                   </div>
+                  <img src="./images/madcoin-face.png" className="eras-coin-1 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="eras-coin-2 parallax-coin"></img>
+                <img src="./images/madcoin-face.png" className="eras-coin-3 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="eras-coin-4 parallax-coin"></img>
+                <img src="./images/madcoin-face.png" className="eras-coin-5 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="eras-coin-6 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="eras-coin-7 parallax-coin"></img>
+                <img src="./images/madcoin-3_4.png" className="eras-coin-8 parallax-coin"></img>
+
              </div>
           </>
       );

@@ -66,7 +66,8 @@ const Navbar = () => {
           <a href="#gameplay" onClick={handleLinkClick}>Gameplay</a>
           <a href="#newsletter" onClick={handleLinkClick}>Newsletter</a>
         </div>
-        <button className='cta-btn'>{cta}</button>
+
+        <a className='cta-btn' href='#newsletter'>{cta}</a>
       </div>
 
       <button className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>

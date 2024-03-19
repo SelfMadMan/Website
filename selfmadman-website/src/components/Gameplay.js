@@ -45,7 +45,7 @@ FR: {
   
       return (
           <>
-             <div className="gameplay-section">
+             <div className="gameplay-section" id="gameplay">
                   <img src='./images/gameplay-separation-blue.png' className="gameplay-separation" alt="Gameplay Separator"></img>
                   {/*<img src='./images/gameplay-screen.png'></img>*/}                
                   <div className="gameplay-content section">
