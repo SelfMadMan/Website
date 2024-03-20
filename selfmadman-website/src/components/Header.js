@@ -4,11 +4,11 @@ import { useLanguage } from '../languageContext'; // Adjust the import path as n
 
 const headerTranslations = {
     EN: {
-      slogan: "From Zero to Hero: Transform your life with Inspiration and Success, one mini-game at a time.",
+      slogan: "When motivation videos go too far...",
       cta: "Get Notified",
     },
     FR: { // Example of German translations
-      slogan: "De Zéro à Idiot : Transformez votre vie grâce à la motivation et à l’ambition, un mini-jeu à la fois.",
+      slogan: "Quand les vidéos de motivation vont trop loin...",
       cta: "S'inscrire",
     },
     // Add more languages as needed

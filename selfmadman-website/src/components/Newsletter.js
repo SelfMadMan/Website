@@ -64,19 +64,19 @@ const Newsletter = forwardRef((props, ref) => {
     };
     const newsletterTranslations = {
         EN: {
-            title: "Zero to Hero in one email: the newsletter that changes everything!",
-            description: "Sign up for early access to the game and exclusive information on the progress of Self Mad Man. We promise we won't sell you online training.",
+            title: "Stay Up to Date",
+            description: "Sign up for early access to the game and exclusive information on the progress of Self Mad Man. We promise we won't sell you online training. ",
             emailPlaceholder: "Enter your email",
-            subscribeButton: "Subscribe",
+            subscribeButton: "Send",
             acceptPolicy: "I accept the ",
             policyLink: "Privacy Policy",
         },
         // Add to src/translations/newsletterTranslations.js
         FR: {
-            title: "De Zéro à Héros en un email : la newsletter qui change tout !",
-            description: "Inscrivez-vous pour un accès anticipé au jeu et des informations exclusives sur l'avancement de Self Mad Man. Nous promettons de ne pas vous vendre de formation en ligne.",
+            title: "Restez A jour !",
+            description: "Inscrivez-vous pour bénéficier d'un accès anticipé au jeu et d'informations exclusives sur la progression de Self Mad Man. Nous vous promettons de ne pas vous vendre de formation en ligne. ",
             emailPlaceholder: "Entrez votre email",
-            subscribeButton: "S'abonner",
+            subscribeButton: "Envoyer",
             acceptPolicy: "J'accepte la ",
             policyLink: "Politique de Confidentialité",
         },

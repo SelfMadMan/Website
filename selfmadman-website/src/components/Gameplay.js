@@ -7,16 +7,16 @@ export default function Gameplay() {
         EN: {
           steps: [
             {
-              title: "Inspiration",
-              text: "Encounter with Chad, a motivating coach, triggers a new beginning.",
+              title: "Piss Yourslef",
+              text: "You won't be able to stop laughing in Self Mad Man. ",
             },
             {
-              title: "Evolution",
-              text: "Participation in various mini-games to improve skills and life.",
+              title: "Mad Gameplay",
+              text: "Discover crazy and exciting  mini-games that will change James’ life",
             },
             {
               title: "Success",
-              text: "Achievement of wealth and ultimate personal fulfillment.",
+              text: "James is rich! He hates the poor and thinks global warming is an excuse to tax him more.",
             },
           ],
         },
