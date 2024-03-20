@@ -118,3 +118,8 @@ body {
   }
 }
 
+.email-preview{
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}

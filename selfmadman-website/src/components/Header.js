@@ -14,17 +14,22 @@ const headerTranslations = {
     // Add more languages as needed
   };
 
-  export default function Header() {
+  export default function Header({scrollToNewsletterRef}) {
     const { language } = useLanguage(); // Use the current language
     const { slogan, cta } = headerTranslations[language]; // Get translations based on current language
-
+    const scrollToNewsletter = (event) => {
+      event.preventDefault();
+      console.log(scrollToNewsletterRef.current); // This should log the DOM element
+      scrollToNewsletterRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+  
     return (
         <>
             <div className="header-container">
                 <div className="header-content">
                     <img src="./images/header-logo.png" alt="Header Logo" />
                     <p>{slogan}</p>
-                    <a className="cta-btn" href="#newsletter">{cta}</a>
+                    <a className='cta-btn'  onClick={scrollToNewsletter}>{cta}</a>
                 </div>
                 
                 <div className="header-socials">

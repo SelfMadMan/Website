@@ -2,6 +2,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getFunctions } from 'firebase/functions';
+import { getStorage } from 'firebase/storage'; // Updated import for Firebase Storage
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -23,4 +24,6 @@ const db = getFirestore(app);
 // Get a reference to the Functions service
 const functions = getFunctions(app);
 
-export { db, functions };
+const storage = getStorage(app);
+
+export { db, functions, storage };

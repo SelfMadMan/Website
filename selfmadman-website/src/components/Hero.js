@@ -2,7 +2,7 @@ import "../components/Hero.css"
 import "./Root.css"
 import { useLanguage } from '../languageContext'; // Adjust the import path as necessary
 
-export default function Hero() {
+export default function Hero({scrollToNewsletterRef }) {
 
     // src/translations/heroTranslations.js
 const heroTranslations = {
@@ -41,20 +41,28 @@ FR: {
         coin.style.transform = `translateY(${movement}px)`;
     });
 });
-  return (
-      <>
-         <div className='hero-section section' id="presentation">
-          <div className="hero-content">
-              <h2>{title}</h2>
-              <div className="hero-content-p">
-                  {paragraphs.map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
-                  ))}
-              </div>
-              <a className='cta-btn' href='#newsletter'>{cta}</a>
-          </div>
-          <div className="img-container">
-              <img src="./images/hero-section-img.png" className="phone-mockup" alt="Hero Section Mockup"></img>
+
+
+const scrollToNewsletter = (event) => {
+    event.preventDefault();
+    console.log(scrollToNewsletterRef.current); // This should log the DOM element
+    scrollToNewsletterRef.current?.scrollIntoView({ behavior: 'smooth' });
+};
+
+return (
+    <>
+        <div className='hero-section section' id="presentation">
+            <div className="hero-content">
+                <h2>{title}</h2>
+                <div className="hero-content-p">
+                    {paragraphs.map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                    ))}
+                </div>
+                <a className='cta-btn'  onClick={scrollToNewsletter}>{cta}</a>
+            </div>
+            <div className="img-container">              
+            <img src="./images/hero-section-img.png" className="phone-mockup" alt="Hero Section Mockup"></img>
           </div>
                 <img src="./images/madcoin-face.png" className="hero-coin-1 parallax-coin"></img>
                 <img src="./images/madcoin-3_4.png" className="hero-coin-2 parallax-coin"></img>
