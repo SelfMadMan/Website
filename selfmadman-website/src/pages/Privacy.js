@@ -90,6 +90,8 @@ accepter librement.</p>
 <p> L'Utilisateur peut toujours refuser le stockage de cookies en configurant son navigateur. La 
 désactivation complète des cookies indispensables peut faire obstacle à l'utilisation de toutes les 
 fonctionnalités interactives du Site Internet.</p>
+
+<a className="cta-btn" download="" href="./images/Self Mad Man - Website Privacy Policy - 2024-03-19.pdf">Télécharger Politique de Confidentialité</a>
     </div>
             <Footer />
         </div>
