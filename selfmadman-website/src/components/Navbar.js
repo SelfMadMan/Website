@@ -57,6 +57,8 @@ const Navbar = ({scrollToNewsletterRef }) => {
   const handleLinkClick = () => setIsOpen(false); // Close the mobile menu
 
   const scrollToNewsletter = (event) => {
+    setIsOpen(false);
+
     event.preventDefault();
     console.log(scrollToNewsletterRef.current); // This should log the DOM element
     scrollToNewsletterRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -70,7 +72,7 @@ const Navbar = ({scrollToNewsletterRef }) => {
         <div className='navbar-content'>
           <a href="#presentation" onClick={handleLinkClick}>Presentation</a>
           <a href="#gameplay" onClick={handleLinkClick}>Gameplay</a>
-          <a href="#newsletter" onClick={handleLinkClick}>Newsletter</a>
+          <a href="#newsletter" onClick={scrollToNewsletter}>Newsletter</a> {/* Use scrollToNewsletter here */}
         </div>
 
                 <a className='cta-btn'  onClick={scrollToNewsletter}>{cta}</a>
