@@ -7,21 +7,19 @@ export default function Hero({scrollToNewsletterRef }) {
     // src/translations/heroTranslations.js
 const heroTranslations = {
     EN: {
-      title: "James the Self Mad Man",
+      title: "It's time to become somebody",
       paragraphs: [
-        `Dive into "Self Mad Man", a game where motivation and ambition transform a desperate man, James, into a resounding success. Inspired by a motivating TikTok video, embark on a quest for wealth and fulfillment.`,
-        `"Self-Mad Man" features mini-games symbolizing each step of your evolution, from health to wealth. With engaging graphics and music, advance towards autonomy and success.`,
-        `"Self-Mad Man" features mini-games symbolizing each step of your evolution, from health to wealth. With engaging graphics and music, advance towards autonomy and success.`,
+        `Self Mad Man is a free to play mobile game where you embody James, a man who lost his job, his wife, his car and his dignity in the same day. His life takes an unexpected turn when he discovers a motivation video on TikTok and finally understands he just have to own three Lamborghinis and invest in crypto to be successful.`,
+        `Self Mad Man features mini-games symbolizing each step of James’ evolution. Start by fighting random people in the street to prove your masculinity and end by defending your car against ecologists.`,
       ],
       cta: "Get Notified",
     },
 // Add to src/translations/heroTranslations.js
 FR: {
-    title: "James le Self Mad Man",
+    title: "Devenez Le Roi De Ce Monde",
     paragraphs: [
-      `Plongez dans "Self Mad Man", un jeu où motivation et ambition transforment un homme désespéré, James, en un succès retentissant. Inspiré par une vidéo motivante sur TikTok, embarquez dans une quête de richesse et d'accomplissement.`,
-      `"Self-Mad Man" présente des mini-jeux symbolisant chaque étape de votre évolution, de la santé à la richesse. Avec des graphiques attrayants et de la musique, avancez vers l'autonomie et le succès.`,
-      `"Self-Mad Man" présente des mini-jeux symbolisant chaque étape de votre évolution, de la santé à la richesse. Avec des graphiques attrayants et de la musique, avancez vers l'autonomie et le succès.`,
+      `Self Mad Man est un jeu mobile gratuit dans lequel vous incarnez James, un homme qui a perdu son travail, sa femme, sa voiture et sa dignité le même jour. Sa vie prend un tournant inattendu lorsqu'il découvre une vidéo de motivation sur TikTok et comprend enfin qu'il lui suffit de posséder trois Lamborghini et d'investir dans la crypto pour réussir.`,
+      `"Self Mad Man propose des mini-jeux représentant chaque étape de l'évolution de James. Commencez par combattre des gens au hasard dans la rue pour affirmer votre masculinité et terminez en défendant votre lambo’ contre des écolos en grève.`,
     ],
     cta: "S'inscrire",
 },
