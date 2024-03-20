@@ -12,6 +12,7 @@
     align-items: center;
     position: relative;
     gap: 50px;
+    overflow: hidden;
 }
 .hero-content {
     max-width: 650px;

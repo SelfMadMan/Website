@@ -24,7 +24,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+
     
 }
 
@@ -127,4 +127,24 @@ body {
   display: flex;
   justify-content: center;
   background-color: grey;
+}
+
+
+.privacy-bg {
+  background-color: var(--dark-blue);
+}
+.privacy-content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 10%;
+}
+.privacy-content ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.privacy-content ul li {
+  list-style: inside;
 }

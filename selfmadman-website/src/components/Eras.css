@@ -4,6 +4,7 @@
     padding-bottom: 25px;
     position: relative;
     max-height: 99vh;
+    overflow: hidden;
 
 }
 .eras-separation {
