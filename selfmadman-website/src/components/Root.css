@@ -102,6 +102,11 @@ body {
   cursor: not-allowed !important; 
 
 }
+.cta-btn.disabled:hover, .cta-btn:disabled:hover {
+  cursor: default;
+  scale: 1; /* Keep scale at default /
+  transition: none; / No transition */
+}
 .parallax-coin {
   transition: transform 0.2s ease-out;
 }

@@ -38,8 +38,8 @@ const CookiePopup = () => {
     <div className="cookie-popup">
       <p>Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre politique de cookies.</p>
         <div className='cookie-btn'>
-        <button onClick={() => handleButtonClick('Refuse')} className='cta-btn disabled'>{Refuse}</button>
-         <button onClick={() => handleButtonClick('Accept')} className='cta-btn'>{Accept}</button>
+        <button onClick={() => handleButtonClick('Refuse')} className='refuse-btn'>{Refuse}</button>
+         <button onClick={() => handleButtonClick('Accept')} className='allow-btn'>{Accept}</button>
 
         </div>
     </div>

@@ -28,6 +28,48 @@
     justify-content: center;
     gap: 15px;
   }
+
+  .allow-btn {
+    display: flex;
+    padding: 0px 20px 4px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.027px;
+    border-radius: 0.8px;
+    background: #FDCF07;
+    box-shadow: 3.2px 3.2px 0px 0px #FC7200;
+    color: var(--white, #FFF);
+    text-align: center;
+    font-family: "TOMOBossaBlack";
+    font-size: 21.583px;
+    font-weight: 900;
+    border: none;
+    z-index: 100;
+}
+.allow-btn:hover,
+.refuse-btn:hover {
+  cursor: pointer;
+  scale: 1.05;
+  transition: ease-in-out;
+}
+.refuse-btn {
+  display: flex;
+  padding: 0px 20px 4px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.027px;
+  border-radius: 0.8px;
+  background: #a1a1a1;
+  box-shadow: 3.2px 3.2px 0px 0px #505050;
+  color: var(--white, #FFF);
+  text-align: center;
+  font-family: "TOMOBossaBlack";
+  font-size: 21.583px;
+  font-weight: 900;
+  border: none;
+
+}
+
   
 
   @media only screen and (max-width: 450px)  {

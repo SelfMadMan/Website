@@ -92,6 +92,7 @@
     cursor: pointer;
   }
 
+
   @media only screen and (min-width: 425px) and (max-width: 900px) {
     .newsletter-box input  {
         width: 350px;

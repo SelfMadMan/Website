@@ -55,7 +55,7 @@
   
   @media (max-width: 768px) {
     .nav-items {
-      position: absolute;
+      position: fixed;
       right: 0;
       top: 55px;
       background-color: var(--dark-blue);
