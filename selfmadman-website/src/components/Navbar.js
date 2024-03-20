@@ -10,11 +10,9 @@ const Navbar = ({scrollToNewsletterRef }) => {
 
 
   const heroTranslations = {
-    EN: {
-      
+    EN: {  
       cta: "Get Notified",
     },
-    // Add to src/translations/heroTranslations.js
     FR: {
       cta: "S'inscrire",
     },
@@ -62,23 +60,22 @@ const Navbar = ({scrollToNewsletterRef }) => {
     event.preventDefault();
     console.log(scrollToNewsletterRef.current); // This should log the DOM element
     scrollToNewsletterRef.current?.scrollIntoView({ behavior: 'smooth' });
-};
+  };
 
-  // Ajouter une classe basée sur l'état isOpen
+  // Add a class based on the isOpen state
   const navbarClass = `navbar ${isOpen ? 'fixed' : 'sticky'} ${isOpen || isScrolled ? 'nav-bg-dark-blue' : ''}`;
   return (
-    <nav className={`navbar ${isOpen || isScrolled ? 'nav-bg-dark-blue' : ''}`}>
+    <nav className={navbarClass}>
       <div className={`nav-items ${isOpen && 'open'}`}>
         <div className='navbar-content'>
           <a href="#presentation" onClick={handleLinkClick}>Presentation</a>
           <a href="#gameplay" onClick={handleLinkClick}>Gameplay</a>
           <a href="#newsletter" onClick={scrollToNewsletter}>Newsletter</a> {/* Use scrollToNewsletter here */}
         </div>
-
-                <a className='cta-btn'  onClick={scrollToNewsletter}>{cta}</a>
+        <a className='cta-btn' onClick={scrollToNewsletter}>{cta}</a>
       </div>
 
-      <button className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
+      <button className={`nav-toggle ${isOpen ? 'fixed-cross' : ''}`} onClick={() => setIsOpen(!isOpen)}>
         <i className={isOpen ? 'bi bi-x-lg' : 'bi bi-list'}></i>
       </button>
     </nav>
