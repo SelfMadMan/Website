@@ -1,13 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './CookiePopup.css'; // Assurez-vous d'importer le fichier CSS correctement
 import { useLanguage } from '../languageContext'; // Adjust the import path as necessary
 import { db } from '../firebaseconfig'; // Adjust the import path as necessary
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+
+
+
 const CookiePopup = () => {
   const [isVisible, setIsVisible] = useState(true);
   const { language } = useLanguage(); // Use the current language
+
+  useEffect(() => {
+    const consentGiven = sessionStorage.getItem('cookieConsent');
+    if (consentGiven) {
+      setIsVisible(false); // Hide popup if consent is already given
+    }
+  }, []);
+
+
   const handleButtonClick = async (consent) => {
     setIsVisible(false);
+    sessionStorage.setItem('cookieConsent', consent); // Store the user's decision in sessionStorage
 
     try {
       // Specify the collection where you want to save the consent

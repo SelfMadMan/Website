@@ -41,6 +41,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
     
   });
 });
+
 exports.NewsletterTemplate = functions.https.onRequest((req, res) => {
   cors(req, res, async () => {
 

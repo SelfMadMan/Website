@@ -2,6 +2,7 @@ import "../components/Footer.css"
 import "./Root.css"
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { useLanguage } from '../languageContext'; // Adjust the import path as necessary
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     const footerTranslations = {
@@ -23,8 +24,8 @@ export default function Footer() {
         <footer className="footer-section">
 
         <ul>
-        <li><a href="/privacy" target="__blank">{privacy}</a></li>
-                    <li><a href="/terms" target="__blank">{terms}</a></li>
+        <li><Link to="/privacy">{privacy}</Link></li>
+                    <li><Link to="/terms">{terms}</Link></li>
         </ul>
         <div className="footer-icons">
             <a href="https://www.instagram.com/selfmadman_/" target="__blank"><i class="bi bi-instagram"></i></a>
