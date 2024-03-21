@@ -110,6 +110,9 @@ body {
 .parallax-coin {
   transition: transform 0.2s ease-out;
 }
+.yellow-text {
+  color: var(--yellow);
+}
 
 
 

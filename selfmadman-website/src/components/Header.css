@@ -47,7 +47,7 @@
     top: 50%; 
     left: 36px; 
     transform: translateY(-50%);
-    z-index: 10;
+    z-index: 100;
 }
 .header-socials a i::before {
     font-size: 25px;
@@ -64,6 +64,9 @@
     z-index: 1;
     padding: 0 50px;
     transform: translateY(-40%);
+}
+.header-james img {
+    max-width: 200px;
 }
 
 .header-coin-1 {
@@ -107,14 +110,14 @@
     width: 61px;
     height: auto;
     right: 25%;
-    bottom: 60px;
+    bottom: 110px;
 }
 .header-coin-7 {
     position: absolute;
     width: 61px;
     height: auto;
     left: 35%;
-    bottom: -15px;
+    bottom: 25px;
 }
 .header-coin-8 {
     position: absolute;
@@ -122,6 +125,9 @@
     height: auto;
     right: -28px;
     bottom: 40%;
+}
+.header-logo {
+    max-width: 515px;
 }
 
 @media only screen and (min-width: 551px) and (max-width: 850px) {
@@ -156,8 +162,11 @@
     .header-james {
         scale: 0.6;
         padding: 0;
-        transform: translate(-10px, -40%);
+        transform: translate(-65px, -40%);
         gap: 25px;
-
+    }
+    .header-coin-7 {
+        left: 5%;
+        bottom: 25px;
     }
 }

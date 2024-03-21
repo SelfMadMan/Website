@@ -7,15 +7,15 @@ export default function Gameplay() {
         EN: {
           steps: [
             {
-              title: "Piss Yourslef",
+              title: "Free to Play",
               text: "You won't be able to stop laughing in Self Mad Man. ",
             },
             {
-              title: "Mad Gameplay",
-              text: "Discover crazy and exciting  mini-games that will change James’ life",
+              title: "Made By Students",
+              text: "Discover crazy and exciting  mini-games that will change James' life",
             },
             {
-              title: "Success",
+              title: "Pop References",
               text: "James is rich! He hates the poor and thinks global warming is an excuse to tax him more.",
             },
           ],
@@ -24,15 +24,15 @@ export default function Gameplay() {
 FR: {
     steps: [
       {
-        title: "Inspiration",
+        title: "Jeu gratuit",
         text: "Rencontre avec Chad, un coach motivant, déclenche un nouveau départ.",
       },
       {
-        title: "Évolution",
+        title: "Réalisé par des étudiants",
         text: "Participation à divers mini-jeux pour améliorer compétences et vie.",
       },
       {
-        title: "Succès",
+        title: "Références pop",
         text: "Réalisation de la richesse et accomplissement personnel ultime.",
       },
     ],
@@ -54,7 +54,8 @@ FR: {
                               <img src={`./images/gameplay-${index + 1}.png`} alt={`Gameplay ${index + 1}`}></img>
                               <p className="gameplay-step">{index + 1}</p>
                               <h3>{step.title}</h3>
-                              <p className="gameplay-text">{step.text}</p>
+                               {/*<p className="gameplay-text">{step.text}</p>*/}
+                              
                           </div>
                       ))}
                   </div>

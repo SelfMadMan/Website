@@ -8,7 +8,7 @@ export default function Eras() {
     EN: {
       eras: [
         {
-          title: "Basic Looser",
+          title: "Basic loser",
           text: "After losing everything, James regains hope after discovering an influencer who will make him understand that he just sucks.",
         },
         {
@@ -72,7 +72,6 @@ export default function Eras() {
           </div>
         </div>
         <img src="./images/madcoin-face.png" className="eras-coin-1 parallax-coin"></img>
-        <img src="./images/madcoin-3_4.png" className="eras-coin-2 parallax-coin"></img>
         <img src="./images/madcoin-face.png" className="eras-coin-3 parallax-coin"></img>
         <img src="./images/madcoin-3_4.png" className="eras-coin-4 parallax-coin"></img>
         <img src="./images/madcoin-face.png" className="eras-coin-5 parallax-coin"></img>

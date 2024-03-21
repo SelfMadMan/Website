@@ -27,7 +27,7 @@
     align-items: center;
   }
   
-  .nav-items a {
+  .nav-link {
     color: var(--white);
     text-align: center;
     font-family: "TOMOBossaBlack";
@@ -35,7 +35,7 @@
     font-weight: 900;
   }
 
-  .nav-items a:hover {
+  .nav-link:hover {
     text-shadow: 2px 2px 0px var(--orange);
   }
   

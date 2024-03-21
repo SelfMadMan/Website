@@ -32,7 +32,7 @@ li a:hover {
     gap: 25px;
 }
 .footer-icons i::before {
-    font-size: 20px;
+    font-size: 25px;
     color: var(--dark-blue);
 }
 

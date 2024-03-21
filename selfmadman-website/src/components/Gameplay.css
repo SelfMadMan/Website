@@ -13,8 +13,8 @@
 }
 .gameplay-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
     gap: 25px;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -27,6 +27,9 @@
     align-items: center;
     gap: 15px;
     max-width: 400px;
+}
+.gameplay-box img {
+    width: 50%;
 }
 
 .gameplay-step {
@@ -67,6 +70,7 @@
 @media only screen and (max-width: 800px) {
     .gameplay-content {
         flex-direction: column;
+        align-items: center;
     }
 }
 

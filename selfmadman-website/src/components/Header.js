@@ -27,7 +27,7 @@ const headerTranslations = {
         <>
             <div className="header-container">
                 <div className="header-content">
-                    <img src="./images/header-logo.png" alt="Header Logo" />
+                    <img src="./images/header-logo.png" alt="Header Logo" className="header-logo" />
                     <p>{slogan}</p>
                     <a className='cta-btn'  onClick={scrollToNewsletter}>{cta}</a>
                 </div>

@@ -68,9 +68,9 @@ const Navbar = ({scrollToNewsletterRef }) => {
     <nav className={navbarClass}>
       <div className={`nav-items ${isOpen && 'open'}`}>
         <div className='navbar-content'>
-          <a href="#presentation" onClick={handleLinkClick}>Presentation</a>
-          <a href="#gameplay" onClick={handleLinkClick}>Gameplay</a>
-          <a href="#newsletter" onClick={scrollToNewsletter}>Newsletter</a> {/* Use scrollToNewsletter here */}
+          <a href="#presentation" onClick={handleLinkClick} className='nav-link'>Presentation</a>
+          <a href="#gameplay" onClick={handleLinkClick} className='nav-link'>Gameplay</a>
+          <a href="#newsletter" onClick={scrollToNewsletter} className='nav-link'>Newsletter</a> {/* Use scrollToNewsletter here */}
         </div>
         <a className='cta-btn' onClick={scrollToNewsletter}>{cta}</a>
       </div>
