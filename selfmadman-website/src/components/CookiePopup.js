@@ -36,20 +36,22 @@ const CookiePopup = () => {
   if (!isVisible) return null;
   const heroTranslations = {
     EN: {
+      text: "We use cookies to improve your experience. By continuing, you accept our cookie policy.",
       Refuse:"Refuse",
       Accept: "Accept",
     },
     // Add to src/translations/heroTranslations.js
     FR: {
+      text: "Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre politique de cookies.",
       Refuse:"Refuser",
       Accept: "Accepter",
     },
   };
-  const { Refuse, Accept } = heroTranslations[language]; // Get translations
+  const { text, Refuse, Accept  } = heroTranslations[language]; // Get translations
 
   return (
     <div className="cookie-popup">
-      <p>Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre politique de cookies.</p>
+      <p>{text}</p>
         <div className='cookie-btn'>
         <button onClick={() => handleButtonClick('Refuse')} className='refuse-btn'>{Refuse}</button>
          <button onClick={() => handleButtonClick('Accept')} className='allow-btn'>{Accept}</button>
