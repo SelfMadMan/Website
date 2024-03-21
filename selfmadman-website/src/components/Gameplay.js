@@ -46,12 +46,12 @@ FR: {
       return (
           <>
              <div className="gameplay-section" id="gameplay">
-                  <img src='./images/gameplay-separation-blue.png' className="gameplay-separation" alt="Gameplay Separator"></img>
+                  <img src='./images/gameplay-separation-blue.png' className="gameplay-separation"  alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
                   {/*<img src='./images/gameplay-screen.png'></img>*/}                
                   <div className="gameplay-content section">
                       {steps.map((step, index) => (
                           <div className="gameplay-box" key={index}>
-                              <img src={`./images/gameplay-${index + 1}.png`} alt={`Gameplay ${index + 1}`}></img>
+                              <img src={`./images/gameplay-${index + 1}.png`}  alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
                               <p className="gameplay-step">{index + 1}</p>
                               <h3>{step.title}</h3>
                                {/*<p className="gameplay-text">{step.text}</p>*/}

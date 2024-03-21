@@ -40,18 +40,18 @@ const headerTranslations = {
                 <a href="https://www.linkedin.com/in/chad-motivation-1930ab2b7/" target="__blank"><i class="bi bi-linkedin"></i></a>
             </div>
             <div className="header-james">
-                <img src="./images/header-james-1.png"/>
-                <img src="./images/header-james-2.png"/>
+                <img src="./images/header-james-1.png" alt="Self Mad Man Oussama Ammar mobile mini-game"/>
+                <img src="./images/header-james-2.png" alt="Self Mad Man Oussama Ammar mobile mini-game"/>
             </div>
 
-            <img src="./images/madcoin-face.png" className="header-coin-1 parallax-coin"></img>
-                <img src="./images/madcoin-3_4.png" className="header-coin-2 parallax-coin"></img>
-                <img src="./images/madcoin-face.png" className="header-coin-3 parallax-coin"></img>
-                <img src="./images/madcoin-3_4.png" className="header-coin-4 parallax-coin"></img>
-                <img src="./images/madcoin-face.png" className="header-coin-5 parallax-coin"></img>
-                <img src="./images/madcoin-3_4.png" className="header-coin-6 parallax-coin"></img>
-                <img src="./images/madcoin-3_4.png" className="header-coin-7 parallax-coin"></img>
-                <img src="./images/madcoin-3_4.png" className="header-coin-8 parallax-coin"></img>
+            <img src="./images/madcoin-face.png" className="header-coin-1 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-3_4.png" className="header-coin-2 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-face.png" className="header-coin-3 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-3_4.png" className="header-coin-4 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-face.png" className="header-coin-5 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-3_4.png" className="header-coin-6 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-3_4.png" className="header-coin-7 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-3_4.png" className="header-coin-8 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
 
 
         </div>

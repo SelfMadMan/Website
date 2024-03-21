@@ -62,12 +62,12 @@ return (
             <div className="img-container">              
             <img src="./images/hero-section-img.png" className="phone-mockup" alt="Hero Section Mockup"></img>
           </div>
-                <img src="./images/madcoin-face.png" className="hero-coin-1 parallax-coin"></img>
-                <img src="./images/madcoin-3_4.png" className="hero-coin-2 parallax-coin"></img>
-                <img src="./images/madcoin-face.png" className="hero-coin-3 parallax-coin"></img>
-                <img src="./images/madcoin-3_4.png" className="hero-coin-4 parallax-coin"></img>
-                <img src="./images/madcoin-face.png" className="hero-coin-5 parallax-coin"></img>
-                <img src="./images/madcoin-3_4.png" className="hero-coin-6 parallax-coin"></img>
+                <img src="./images/madcoin-face.png" className="hero-coin-1 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-3_4.png" className="hero-coin-2 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-face.png" className="hero-coin-3 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-3_4.png" className="hero-coin-4 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-face.png" className="hero-coin-5 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+                <img src="./images/madcoin-3_4.png" className="hero-coin-6 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
 
            </div>
         </>

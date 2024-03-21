@@ -57,12 +57,12 @@ export default function Eras() {
         <img src='./images/gameplay-separation-white.png' className="eras-separation" alt="Eras Separator"></img>
         <div className="eras-content">
           <div className="eras-chad-container">
-          <img src={mainImageSrc} className="eras-chad" alt="Eras Chad"></img>
+          <img src={mainImageSrc} className="eras-chad"  alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
           </div>
           <div className="eras-listing">
             {eras.map((era, index) => (
               <div className="eras-listing-box" key={index}>
-                <img src={`./images/era-${index + 1}.png`} className="eras-icon" alt={`Era ${index + 1}`}></img>
+                <img src={`./images/era-${index + 1}.png`} className="eras-icon"  alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
                 <div className="eras-listing-text">
                   <h3>{era.title}</h3>
                   <p>{era.text}</p>
@@ -71,13 +71,13 @@ export default function Eras() {
             ))}
           </div>
         </div>
-        <img src="./images/madcoin-face.png" className="eras-coin-1 parallax-coin"></img>
-        <img src="./images/madcoin-face.png" className="eras-coin-3 parallax-coin"></img>
-        <img src="./images/madcoin-3_4.png" className="eras-coin-4 parallax-coin"></img>
-        <img src="./images/madcoin-face.png" className="eras-coin-5 parallax-coin"></img>
-        <img src="./images/madcoin-3_4.png" className="eras-coin-6 parallax-coin"></img>
-        <img src="./images/madcoin-3_4.png" className="eras-coin-7 parallax-coin"></img>
-        <img src="./images/madcoin-3_4.png" className="eras-coin-8 parallax-coin"></img>
+        <img src="./images/madcoin-face.png" className="eras-coin-1 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+        <img src="./images/madcoin-face.png" className="eras-coin-3 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+        <img src="./images/madcoin-3_4.png" className="eras-coin-4 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+        <img src="./images/madcoin-face.png" className="eras-coin-5 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+        <img src="./images/madcoin-3_4.png" className="eras-coin-6 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+        <img src="./images/madcoin-3_4.png" className="eras-coin-7 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
+        <img src="./images/madcoin-3_4.png" className="eras-coin-8 parallax-coin" alt="Self Mad Man Oussama Ammar mobile mini-game"></img>
 
       </div>
     </>
