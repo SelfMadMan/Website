@@ -18,7 +18,7 @@ const heroTranslations = {
 FR: {
     title: "Devenez Le Roi De Ce Monde",
     paragraphs: [
-      `Self Mad Man</span> est un jeu mobile gratuit dans lequel vous incarnez James, un homme qui a perdu son travail, sa femme, sa voiture et sa dignité le même jour. Sa vie prend un tournant inattendu lorsqu'il découvre une vidéo de motivation sur TikTok et comprend enfin qu'il lui suffit de posséder trois Lamborghini et d'investir dans la crypto pour réussir.`,
+      `Self Mad Man est un jeu mobile gratuit dans lequel vous incarnez James, un homme qui a perdu son travail, sa femme, sa voiture et sa dignité le même jour. Sa vie prend un tournant inattendu lorsqu'il découvre une vidéo de motivation sur TikTok et comprend enfin qu'il lui suffit de posséder trois Lamborghini et d'investir dans la crypto pour réussir.`,
       `"Self Mad Man propose des mini-jeux représentant chaque étape de l'évolution de James. Commencez par combattre des gens au hasard dans la rue pour affirmer votre masculinité et terminez en défendant votre lambo’ contre des écolos en grève.`,
     ],
     cta: "S'inscrire",
