@@ -3,6 +3,7 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getFunctions } from 'firebase/functions';
 import { getStorage } from 'firebase/storage'; // Updated import for Firebase Storage
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -17,7 +18,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
+const analytics = getAnalytics(app);
+logEvent(analytics, 'notification_received');
 // Get a reference to the Firestore service
 const db = getFirestore(app);
 
@@ -26,4 +28,4 @@ const functions = getFunctions(app);
 
 const storage = getStorage(app);
 
-export { db, functions, storage };
+export { db, functions, storage, analytics };
