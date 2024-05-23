@@ -1,6 +1,6 @@
 // Import the functions you need from the Firebase SDKs you need
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore, addDoc, collection } from 'firebase/firestore';
 import { getFunctions } from 'firebase/functions';
 import { getStorage } from 'firebase/storage'; // Updated import for Firebase Storage
 import { getAnalytics, logEvent } from "firebase/analytics";
